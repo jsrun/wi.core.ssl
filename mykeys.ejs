@@ -1,0 +1,31 @@
+<div class="wi-window-header">
+    <div class="wi-window-header-title"><%= __("My Keys")%></div>
+    <div class="wi-window-header-close" title="<%= __("Close")%>"><i class="fa fa-times" aria-hidden="true"></i></div>
+</div>
+<div class="wi-window-main wi-window-workspaces">
+    <table>
+        <thead>
+            <tr>
+                <th><%= __("Name")%></th>
+                <th><%= __("Fingerprint")%></th>
+                <th><%= __("Public Key")%></th>
+                <th><%= __("Private Key")%></th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(var key in itens){%>
+            <tr>
+                <td><%= itens[key].name %></td>
+                <td><%= itens[key].fingerprint %></td>
+                <td><button onclick="webide.ssl.download('<%= itens[key].name %>.pub')">Download</button></td>
+                <td><button onclick="webide.ssl.download('<%= itens[key].name %>')">Download</button></td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>
+<div class="wi-window-footer">
+    <div class="float-right">
+        <button class="wi-btn wi-btn-cancel" title="<%= __("Click to cancel action")%>"><%= __("Cancel")%></button>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+{
+    "name": "wi.core.ssl",
+    "version": "0.0.1",
+    "description": "WebIDE SSL certificate management module",
+    "author": "André Ferreira <andrehrf@gmail.com>",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jsrun/wi.core.ssl"
+    },
+    "bugs": {
+        "url": "https://github.com/jsrun/wi.core.ssl/issues"
+    },
+    "homepage": "https://github.com/jsrun/wi.core.ssl",
+    "dependencies": {
+        "node-rsa": "^0.4.2",
+        "letsencrypt": "^2.1.8",
+        "ssh-keygen": "^0.4.1",
+        "ssh-fingerprint": "^0.0.1"
+    }
+}
